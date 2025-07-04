@@ -8,7 +8,6 @@ orbs:
 parameters:
   config-override-url:
     type: string
-    default: "https://raw.githubusercontent.com/mseong6251/Config-Override-Component/refs/heads/main/orb.yml"
 
 jobs:
   build:
