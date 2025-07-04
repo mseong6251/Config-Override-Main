@@ -1,8 +1,14 @@
 version: 2.1
 
+# Import the team's config as an orb
 orbs:
-  # Replace with your actual orb URL once created
-  my-orb: https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-ORB-REPO/main/orb.yml
+  team-config: << pipeline.parameters.config-override-url >>
+
+# Define parameters for configuration
+parameters:
+  config-override-url:
+    type: string
+    default: "https://raw.githubusercontent.com/mseong6251/Config-Override-Component/refs/heads/main/orb.yml"
 
 jobs:
   build:
@@ -24,6 +30,6 @@ workflows:
     jobs:
       - build
       - test:
-          override-with: my-orb/custom-test
+          override-with: team-config/custom-test
           requires:
             - build
