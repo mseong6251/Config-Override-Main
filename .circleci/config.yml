@@ -2,7 +2,7 @@ version: 2.1
 
 # Import the team's config as an orb
 orbs:
-  team-config: https://raw.githubusercontent.com/mseong6251/<< pipeline.git.repo_name >>/refs/heads/main/orb.yml
+  team-config: https://raw.githubusercontent.com/mseong6251/<< pipeline.git.repo_name >>/refs/heads/main/.circleci/orb.yml
   
 # # Define parameters for configuration
 # parameters:
