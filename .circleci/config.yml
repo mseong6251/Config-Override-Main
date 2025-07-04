@@ -8,6 +8,7 @@ orbs:
 parameters:
   config-override-url:
     type: string
+    default: null
 
 jobs:
   build:
