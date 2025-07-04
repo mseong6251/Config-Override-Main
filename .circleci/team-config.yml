@@ -1,0 +1,12 @@
+version: 2.1
+
+jobs:
+  custom-test:
+    docker:
+      - image: cimg/node:18.0
+    resource_class: large
+
+    steps:
+      - checkout
+      - run: echo "Running Team Config File!"
+        
